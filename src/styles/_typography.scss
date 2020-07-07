@@ -1,0 +1,82 @@
+// variables
+$light: 300;
+$regular: 400;
+$medium: 500;
+
+@mixin headline1($weight: $light) {
+  font-size: 93px;
+  font-weight: $weight;
+  letter-spacing: -1.5px;
+}
+
+@mixin headline2($weight: $light) {
+  font-size: 58px;
+  font-weight: $weight;
+  letter-spacing: -0.5px;
+}
+
+@mixin headline3($weight: $regular) {
+  font-size: 48px;
+  font-weight: $weight;
+}
+
+@mixin headline4($weight: $regular) {
+  font-size: 32px;
+  font-weight: $weight;
+  letter-spacing: 0.25px;
+}
+
+@mixin headline5($weight: $regular) {
+  font-size: 24px;
+  font-weight: $weight;
+}
+
+@mixin headline6($weight: $medium) {
+  font-size: 20px;
+  font-weight: $weight;
+  letter-spacing: 0.15px;
+}
+
+@mixin subtitle1($weight: $regular) {
+  font-size: 16px;
+  font-weight: $weight;
+  letter-spacing: 0.15px;
+}
+
+@mixin subtitle2($weight: $medium) {
+  font-size: 14px;
+  font-weight: $weight;
+  letter-spacing: 0.1px;
+}
+
+@mixin body1($weight: $regular) {
+  font-size: 16px;
+  font-weight: $weight;
+  letter-spacing: 0.5px;
+}
+
+@mixin body2($weight: $regular) {
+  font-size: 14px;
+  font-weight: $weight;
+  letter-spacing: 0.25px;
+}
+
+@mixin button($weight: $medium, $text-transform: uppercase) {
+  font-size: 14px;
+  font-weight: $weight;
+  letter-spacing: 1.25px;
+  text-transform: $text-transform;
+}
+
+@mixin caption($weight: $regular) {
+  font-size: 12px;
+  font-weight: $weight;
+  letter-spacing: 0.4px;
+}
+
+@mixin overline($weight: $regular, $text-transform: uppercase) {
+  font-size: 10px;
+  font-weight: $weight;
+  letter-spacing: 1.5px;
+  text-transform: $text-transform;
+}
