@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+@import "styles/colors";
+@import "styles/layout";
+
+$font-family: "Poppins", sans-serif;
+
+.App {
+  height: 100vh;
+  width: 100vw;
+
+  font-family: $font-family;
+  color: $black;
+
+  @include flexbox;
+}
