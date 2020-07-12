@@ -1,0 +1,15 @@
+@import "styles/colors";
+@import "styles/typography";
+
+.link {
+  color: $primary-blue;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: $primary-blue;
+  }
+}

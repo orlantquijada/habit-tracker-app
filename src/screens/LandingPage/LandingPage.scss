@@ -1,0 +1,38 @@
+@import "styles/colors";
+@import "styles/layout";
+@import "styles/typography";
+
+.landing-page {
+  height: 100%;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+
+  .hero,
+  .auth-form {
+    @include flexbox($direction: column);
+  }
+
+  .hero {
+    background-image: url("../../assets/backdrops/backgroud.jpg");
+    background-position: center;
+    background-size: cover;
+
+    color: white;
+
+    &__content {
+      width: 65%;
+
+      @include flexbox($justify: flex-start, $direction: column);
+
+      &__title {
+        @include headline2($weight: $medium);
+      }
+
+      &__body {
+        @include headline4($weight: $light);
+      }
+    }
+  }
+}

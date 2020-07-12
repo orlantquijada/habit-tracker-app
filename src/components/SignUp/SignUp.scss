@@ -1,0 +1,81 @@
+@import "styles/colors";
+@import "styles/layout";
+@import "styles/typography";
+
+.signup {
+  width: 40%;
+  @include flexbox($direction: column);
+
+  .title {
+    @include headline5($weight: $medium);
+
+    margin-bottom: 1.25rem;
+  }
+
+  .signup-form {
+    width: 100%;
+
+    margin-top: 1.25rem;
+
+    @include flexbox($direction: column);
+
+    .form-fields {
+      width: 100%;
+      margin-bottom: 1.25rem;
+    }
+
+    .loading-indicator {
+      @include flexbox;
+
+      svg {
+        margin-right: 0.75rem;
+
+        animation: rotate-360 1s infinite linear;
+
+        path {
+          fill: $primary-blue;
+        }
+
+        @keyframes rotate-360 {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+
+    .submit-btn {
+      height: 3rem;
+      width: 100%;
+
+      font-family: $font-family;
+      color: white;
+
+      background-color: $primary-blue;
+
+      border: none;
+      border-radius: 0.5rem;
+
+      cursor: pointer;
+
+      margin: 1.25rem 0 1rem 0;
+
+      transition: background-color 200ms ease;
+
+      @include body1($weight: $medium);
+
+      &--disabled {
+        background-color: rgba($color: $primary-blue, $alpha: 0.5);
+        cursor: initial;
+        pointer-events: none;
+      }
+
+      &:hover {
+        background-color: rgba($color: $primary-blue, $alpha: 0.8);
+      }
+    }
+  }
+}
