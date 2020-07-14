@@ -18,6 +18,16 @@
     margin-bottom: 0.5rem;
 
     @include flexbox($justify: space-between);
+
+    .forget-password {
+      color: $primary-blue;
+
+      @include caption;
+
+      &:hover {
+        color: rgba($color: $primary-blue, $alpha: 0.8);
+      }
+    }
   }
 
   &__input {

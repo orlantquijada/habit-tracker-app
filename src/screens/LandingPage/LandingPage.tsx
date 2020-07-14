@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router";
 import SignUp from "components/AuthenticationPages/SignUp";
 
 import "./LandingPage.scss";
+import SignIn from "components/AuthenticationPages/SignIn";
 
 const LandingPage: React.FC = () => {
   return (
@@ -19,6 +20,9 @@ const LandingPage: React.FC = () => {
         <Switch>
           <Route exact path="/signup">
             <SignUp />
+          </Route>
+          <Route exact path="/signin">
+            <SignIn />
           </Route>
         </Switch>
       </div>

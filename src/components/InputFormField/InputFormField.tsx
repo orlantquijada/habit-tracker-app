@@ -2,16 +2,20 @@ import React, { useState } from "react";
 import { ReactComponent as ErrorIcon } from "assets/icons/error.svg";
 
 import "./InputFormField.scss";
+import { Link } from "react-router-dom";
 
 interface Props {
   inputType: string;
   name: string;
   id: string;
   labelText: string;
+  value: string;
+  setValue: React.Dispatch<React.SetStateAction<string>>;
   errorMessage?: string;
   inputRef?: React.MutableRefObject<HTMLInputElement | null>;
   isLoading?: boolean;
   isRequired?: boolean;
+  isSignIn?: boolean;
 }
 
 const InputFormField: React.FC<Props> = ({
@@ -23,8 +27,10 @@ const InputFormField: React.FC<Props> = ({
   inputRef,
   isLoading = false,
   isRequired = false,
+  isSignIn = false,
+  value,
+  setValue,
 }) => {
-  const [value, setValue] = useState("");
   const [type, setType] = useState(inputType);
   const [isPasswordShown, setIsPasswordShown] = useState(false);
   const [errMessage, setErrMessage] = useState(errorMessage);
@@ -51,6 +57,11 @@ const InputFormField: React.FC<Props> = ({
     <div className="field">
       <div className="field__label">
         <label htmlFor={id}>{labelText}</label>
+        {isPasswordType && isSignIn && (
+          <Link to="#" className="forget-password">
+            Forget password?
+          </Link>
+        )}
       </div>
       <div className="field__input">
         <input

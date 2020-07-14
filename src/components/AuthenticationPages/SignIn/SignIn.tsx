@@ -5,12 +5,11 @@ import AuthLink from "components/AuthLink";
 
 import "../AuthPage.scss";
 
-const SignUp: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(false);
-
-  const [name, setName] = useState("");
+const SignIn: React.FC = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const [isLoading, setIsLoading] = useState(false);
 
   const usernameInputRef = useRef<HTMLInputElement>(null);
   const passwordInputRef = useRef<HTMLInputElement>(null);
@@ -27,29 +26,20 @@ const SignUp: React.FC = () => {
   };
   return (
     <div className="auth-page">
-      <h5 className="auth-page__title">Count your seconds</h5>
+      <h5 className="auth-page__title">Sign in to your account</h5>
       <AuthForm
         isLoading={isLoading}
         loadingText="Creating Account"
         submitBtnText="Create Account"
         authLink={
           <AuthLink
-            labelText="Already have an account?"
-            linkText="Sign In"
-            link="/signin"
+            labelText="Sign in to your account"
+            linkText="Sign Up"
+            link="/signup"
           />
         }
         onSubmit={formOnSubmit}
       >
-        <InputFormField
-          inputType="text"
-          name="full-name"
-          id="full-name"
-          labelText="Name"
-          value={name}
-          setValue={setName}
-          isLoading={isLoading}
-        />
         <InputFormField
           inputType="text"
           name="username"
@@ -71,10 +61,11 @@ const SignUp: React.FC = () => {
           isLoading={isLoading}
           inputRef={passwordInputRef}
           isRequired
+          isSignIn
         />
       </AuthForm>
     </div>
   );
 };
 
-export default SignUp;
+export default SignIn;
