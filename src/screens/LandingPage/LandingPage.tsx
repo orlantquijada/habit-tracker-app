@@ -1,6 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router";
-import SignUp from "../../components/SignUp";
+import SignUp from "components/AuthenticationPages/SignUp";
 
 import "./LandingPage.scss";
 
@@ -15,9 +15,9 @@ const LandingPage: React.FC = () => {
           </p>
         </div>
       </div>
-      <div className="auth-form">
+      <div className="authentication">
         <Switch>
-          <Route>
+          <Route exact path="/signup">
             <SignUp />
           </Route>
         </Switch>

@@ -10,7 +10,7 @@
   grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
 
   .hero,
-  .auth-form {
+  .authentication {
     @include flexbox($direction: column);
   }
 
