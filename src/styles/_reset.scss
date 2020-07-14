@@ -3,6 +3,10 @@
   padding: 0;
 
   box-sizing: border-box;
+
+  &::selection {
+    background: $gray1;
+  }
 }
 
 :root {

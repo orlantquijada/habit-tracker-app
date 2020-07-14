@@ -3,6 +3,8 @@ $light: 300;
 $regular: 400;
 $medium: 500;
 
+$font-family: "Poppins", sans-serif;
+
 @mixin headline1($weight: $light) {
   font-size: 93px;
   font-weight: $weight;
