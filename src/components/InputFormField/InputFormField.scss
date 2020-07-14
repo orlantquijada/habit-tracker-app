@@ -15,9 +15,9 @@
   }
 
   &__label {
-    display: block;
-
     margin-bottom: 0.5rem;
+
+    @include flexbox($justify: space-between);
   }
 
   &__input {

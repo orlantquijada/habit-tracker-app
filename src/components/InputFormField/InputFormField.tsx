@@ -49,9 +49,9 @@ const InputFormField: React.FC<Props> = ({
 
   return (
     <div className="field">
-      <label htmlFor={id} className="field__label">
-        {labelText}
-      </label>
+      <div className="field__label">
+        <label htmlFor={id}>{labelText}</label>
+      </div>
       <div className="field__input">
         <input
           disabled={isLoading}
@@ -61,6 +61,8 @@ const InputFormField: React.FC<Props> = ({
           onChange={inputOnChange}
           value={value}
           ref={inputRef}
+          required={isRequired}
+          formNoValidate
         />
         {isPasswordType && (
           <span className="show-password" onClick={spanOnClick}>

@@ -1,0 +1,13 @@
+@import "styles/layout";
+@import "styles/typography";
+
+.auth-page {
+  width: 40%;
+  @include flexbox($direction: column);
+
+  &__title {
+    @include headline5($weight: $medium);
+
+    margin-bottom: 1.25rem;
+  }
+}
