@@ -22,9 +22,13 @@
     color: white;
 
     &__content {
-      width: 65%;
+      width: 70%;
 
-      @include flexbox($justify: flex-start, $direction: column);
+      @include flexbox(
+        $justify: flex-start,
+        $align: flex-start,
+        $direction: column
+      );
 
       &__title {
         @include headline2($weight: $medium);
