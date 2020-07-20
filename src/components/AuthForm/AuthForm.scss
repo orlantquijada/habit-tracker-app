@@ -57,7 +57,7 @@
 
     @include body1($weight: $medium);
 
-    &--disabled {
+    &:disabled {
       background-color: rgba($color: $primary-blue, $alpha: 0.5);
       cursor: initial;
       pointer-events: none;

@@ -36,7 +36,7 @@ const AuthForm: React.FC<Props> = ({
       )}
       <button
         type="submit"
-        className={isLoading ? "submit-btn submit-btn--disabled" : "submit-btn"}
+        className="submit-btn"
         disabled={isLoading ? true : false}
       >
         {submitBtnText}
